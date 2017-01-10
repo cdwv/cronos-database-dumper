@@ -20,9 +20,21 @@ class Configuration implements ConfigurationInterface
         $treeBuilder = new TreeBuilder();
         $rootNode = $treeBuilder->root('code_wave_cronos_database_dumber');
 
-        // Here you should define the parameters that are allowed to
-        // configure your bundle. See the documentation linked above for
-        // more information on that topic.
+        $rootNode
+            ->children()
+                ->scalarNode('hour')
+                    ->defaultValue('4')
+                ->end()
+                ->scalarNode('minute')
+                    ->defaultValue('0')
+                ->end()
+                ->scalarNode('dumps_location')
+                    ->defaultValue('default')
+                ->end()
+                ->scalarNode('key')
+                    ->defaultValue('default')
+                ->end()
+            ->end();
 
         return $treeBuilder;
     }

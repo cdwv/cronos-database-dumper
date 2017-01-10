@@ -1,4 +1,31 @@
 services:
-#    code_wave_cronos_database_dumber.example:
-#        class: CodeWave\CronosDatabaseDumberBundle\Example
-#        arguments: [@service_id, "plain_value", %parameter%]
+    cdwv.cron_configuration:
+        class: CodeWave\CronosDatabaseDumberBundle\Cron\CronConfiguration
+
+    cdwv.cron:
+        class: MyBuilder\Cronos\Formatter\Cron
+
+    cdwv.cronos.cron_manipulator:
+        class: MyBuilder\Cronos\Updater\CommandCronManipulator
+        arguments:
+            - "@cdwv.cronos.process_runner"
+            - "@cdwv.cronos.filesystem"
+        public: false
+
+    cdwv.cronos.process_runner:
+         class: MyBuilder\Cronos\Updater\SymfonyProcessRunner
+         public: false
+
+    cdwv.cronos.filesystem:
+         class: MyBuilder\Cronos\Updater\SymfonyFileSystem
+         public: false
+
+    mybuilder.cronos_bundle.cron_process_updater:
+        class: MyBuilder\Cronos\Updater\CronUpdater
+        arguments:
+            - "@cdwv.cronos.cron_manipulator"
+
+    cdwv.cron_builder:
+        class: CodeWave\CronosDatabaseDumberBundle\Cron\CronJobBuilder
+        arguments:
+            - "@cdwv.cron"

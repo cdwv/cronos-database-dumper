@@ -22,7 +22,10 @@ class CodeWaveCronosDatabaseDumberExtension extends Extension
         $configuration = new Configuration();
         $config = $this->processConfiguration($configuration, $configs);
 
-        $loader = new Loader\YamlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
+        $loader = new Loader\YamlFileLoader($container, new FileLocator(__DIR__ . '/../Resources/config'));
         $loader->load('services.yml');
+
+        $cronConfiguration = $container->getDefinition('cdwv.cron_configuration');
+        $cronConfiguration->addMethodCall('setConfig', array($config));
     }
 }

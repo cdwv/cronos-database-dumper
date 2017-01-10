@@ -1,0 +1,34 @@
+{
+  "name": "cdwv/cronos-database-dumper",
+  "description": "Cronos database dumper",
+  "type": "symfony-bundle",
+  "authors": [
+    {
+      "name": "Karol Grochowalski",
+      "email": "karol.grochowalski@codewave.pl"
+    }
+  ],
+  "keywords": [
+    "cron cronos dump dumper database bundle"
+  ],
+  "license": [
+    "MIT"
+  ],
+  "require": {
+  },
+  "autoload": {
+    "psr-0": {
+      "Codewave\\DemoBundle": ""
+    }
+  },
+  "target-dir": "cdwv/CronosDatabaseDumper",
+  "repositories": [
+    {
+    }
+  ],
+  "extra": {
+    "branch-alias": {
+      "dev-master": "some_version-dev"
+    }
+  }
+}
