@@ -15,6 +15,8 @@
     "MIT"
   ],
   "require": {
+    "cdwv/mysql-dumper-command-bundle": "~1.1",
+    "mybuilder/cronos": "^2.0"
   },
   "autoload": {
     "psr-0": {
