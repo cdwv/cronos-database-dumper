@@ -1,0 +1,3 @@
+code_wave_cronos_database_dumber_homepage:
+    path:     /
+    defaults: { _controller: CodeWaveCronosDatabaseDumberBundle:Default:index }
