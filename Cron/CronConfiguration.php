@@ -1,6 +1,6 @@
 <?php
 
-namespace CodeWave\CronosDatabaseDumberBundle\Cron;
+namespace CodeWave\CronosDatabaseDumperBundle\Cron;
 
 class CronConfiguration
 {

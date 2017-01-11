@@ -1,6 +1,6 @@
 <?php
 
-namespace CodeWave\CronosDatabaseDumberBundle\Command;
+namespace CodeWave\CronosDatabaseDumperBundle\Command;
 
 use CodeWave\MysqlDumperCommandBundle\Command\MysqlDumperCommand;
 use Symfony\Bundle\FrameworkBundle\Command\ContainerAwareCommand;

@@ -1,6 +1,6 @@
 services:
     cdwv.cron_configuration:
-        class: CodeWave\CronosDatabaseDumberBundle\Cron\CronConfiguration
+        class: CodeWave\CronosDatabaseDumperBundle\Cron\CronConfiguration
 
     cdwv.cron:
         class: MyBuilder\Cronos\Formatter\Cron
@@ -26,6 +26,6 @@ services:
             - "@cdwv.cronos.cron_manipulator"
 
     cdwv.cron_builder:
-        class: CodeWave\CronosDatabaseDumberBundle\Cron\CronJobBuilder
+        class: CodeWave\CronosDatabaseDumperBundle\Cron\CronJobBuilder
         arguments:
             - "@cdwv.cron"
