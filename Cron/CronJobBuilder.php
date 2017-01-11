@@ -8,18 +8,20 @@ class CronJobBuilder
 {
     /** @var Cron */
     private $cron;
+    private $configuration;
 
-    public function __construct(Cron $cron)
+    public function __construct(Cron $cron, CronConfiguration $configuration)
     {
         $this->cron = $cron;
+        $this->configuration = $configuration;
     }
 
-    public function build(CronConfiguration $cronConfiguration, $command)
+    public function build($command)
     {
         $this->cron
             ->job($command)
-            ->setMinute($cronConfiguration->getMinute())
-            ->setHour($cronConfiguration->getHour())
+            ->setMinute($this->configuration->getMinute())
+            ->setHour($this->configuration->getHour())
             ->end();
 
         return $this->cron;

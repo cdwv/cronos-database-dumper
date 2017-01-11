@@ -5,6 +5,12 @@ services:
     cdwv.cron:
         class: MyBuilder\Cronos\Formatter\Cron
 
+    cdwv.dumper_command_builder:
+        class:  CodeWave\CronosDatabaseDumperBundle\Dumper\MysqlDumperCommandBuilder
+        arguments:
+            - "@cdwv.cron_configuration"
+            - "%kernel.root_dir%"
+
     cdwv.cronos.cron_manipulator:
         class: MyBuilder\Cronos\Updater\CommandCronManipulator
         arguments:
@@ -29,3 +35,4 @@ services:
         class: CodeWave\CronosDatabaseDumperBundle\Cron\CronJobBuilder
         arguments:
             - "@cdwv.cron"
+            - "@cdwv.cron_configuration"

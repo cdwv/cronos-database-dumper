@@ -34,6 +34,12 @@ class Configuration implements ConfigurationInterface
                 ->scalarNode('key')
                     ->defaultValue('default')
                 ->end()
+                ->scalarNode('php_path')
+                   ->defaultValue('/usr/bin/php')
+                ->end()
+                ->scalarNode('env')
+                  ->defaultValue('prod')
+                ->end()
             ->end();
 
         return $treeBuilder;
