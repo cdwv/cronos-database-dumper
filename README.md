@@ -1,6 +1,7 @@
 Description
 ------------
-Bundel który dodaje do projektu komendę która z kolei dodaje do crontaba zadanie które tworzy kopie zapasową baz danych
+Bundel który dodaje do projektu komendę, która z kolei dodaje do crontaba zadanie,
+ tworzące kopie zapasową baz danych
 
 Installation
 ------------
