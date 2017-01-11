@@ -20,7 +20,7 @@ class CronConfiguration
         $this->hour = $config['hour'];
         $this->minute = $config['minute'];
         $this->key = $config['key'];
-        $this->phpPath = $config['phpPath'];
+        $this->phpPath = $config['php_path'];
         $this->env = $config['env'];
     }
 
