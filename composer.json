@@ -20,7 +20,7 @@
   },
   "autoload": {
     "psr-0": {
-      "Codewave\\DemoBundle": ""
+      "Codewave\\CronosDatabaseDumperBundle": ""
     }
   },
   "target-dir": "cdwv/CronosDatabaseDumper",
