@@ -19,11 +19,11 @@
     "mybuilder/cronos": "^1.0"
   },
   "autoload": {
-    "psr-0": {
-      "Codewave\\CronosDatabaseDumperBundle": ""
+    "psr-4": {
+      "CodeWave\\CronosDatabaseDumperBundle": ""
     }
   },
-  "target-dir": "cdwv/CronosDatabaseDumper",
+  "target-dir": "codewave/CronosDatabaseDumper",
   "repositories": [
     {
     }
