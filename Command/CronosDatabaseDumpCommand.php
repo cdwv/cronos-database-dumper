@@ -10,7 +10,7 @@ class CronosDatabaseDumpCommand extends ContainerAwareCommand
 {
     public function configure()
     {
-        $this->setName('cdwv:cronos-database-dumer:dump');
+        $this->setName('cdwv:cronos-database-dumper:update');
     }
 
     public function execute(InputInterface $input, OutputInterface $output)
