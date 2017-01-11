@@ -16,7 +16,7 @@
   ],
   "require": {
     "cdwv/mysql-dumper-command-bundle": "~2.0",
-    "mybuilder/cronos": "^2.0"
+    "mybuilder/cronos": "^1.0"
   },
   "autoload": {
     "psr-0": {
