@@ -11,6 +11,7 @@ class CronosDatabaseDumpCommand extends ContainerAwareCommand
     public function configure()
     {
         $this->setName('cdwv:cronos-database-dumper:update');
+        $this->setDescription('Add to crontab command to database backup');
     }
 
     public function execute(InputInterface $input, OutputInterface $output)
