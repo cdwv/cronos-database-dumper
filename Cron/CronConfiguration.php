@@ -4,8 +4,11 @@ namespace CodeWave\CronosDatabaseDumberBundle\Cron;
 
 class CronConfiguration
 {
+    /** @var  string */
     private $hour;
+    /** @var  string */
     private $minute;
+    /** @var  string */
     private $key;
 
     public function setConfig($config)
