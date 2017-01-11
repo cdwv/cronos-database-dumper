@@ -11,9 +11,6 @@
   "keywords": [
     "cron cronos dump dumper database bundle"
   ],
-  "license": [
-    "MIT"
-  ],
   "require": {
     "cdwv/mysql-dumper-command-bundle": "~2.0",
     "mybuilder/cronos": "^1.0"
@@ -21,16 +18,6 @@
   "autoload": {
     "psr-4": {
       "CodeWave\\CronosDatabaseDumperBundle": ""
-    }
-  },
-  "target-dir": "codewave/CronosDatabaseDumper",
-  "repositories": [
-    {
-    }
-  ],
-  "extra": {
-    "branch-alias": {
-      "dev-master": "some_version-dev"
     }
   }
 }
