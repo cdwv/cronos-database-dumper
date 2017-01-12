@@ -8,15 +8,15 @@ Installation
 add to composer.json repository:
 
 ```
-        {
-            "type": "vcs",
-            "url": "ssh://git@git.cdwv.pl:23/cdwv/cronos-database-dumper.git"
-        }
+{
+    "type": "vcs",
+    "url": "ssh://git@git.cdwv.pl:23/cdwv/cronos-database-dumper.git"
+}
 ```
 run:
 ```
 composer require cdwv/mysql-dumper-command-bundle
-composer require cdwv/cdwv/cronos-database-dumper
+composer require cdwv/cronos-database-dumper
 ```
 
 add bundle to AppKernel:
