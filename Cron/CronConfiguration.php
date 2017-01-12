@@ -14,6 +14,8 @@ class CronConfiguration
     private $phpPath;
     /** @var  string */
     private $env;
+    /** @var  string */
+    private $dumpsLocation;
 
     public function setConfig($config)
     {
@@ -22,6 +24,7 @@ class CronConfiguration
         $this->key = $config['key'];
         $this->phpPath = $config['php_path'];
         $this->env = $config['env'];
+        $this->dumpsLocation = $config['dumps_location'];
     }
 
     public function getHour()
@@ -47,5 +50,9 @@ class CronConfiguration
     public function getEnv()
     {
         return $this->env;
+    }
+    public function getDumpsLocation()
+    {
+        return $this->dumpsLocation;
     }
 }

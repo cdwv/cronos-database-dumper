@@ -22,7 +22,11 @@ class MysqlDumperCommandBuilder
         $dumperCommand = new MysqlDumperCommand();
         $dumperCommandName = $dumperCommand->getName();
 
-        $cmd = $this->configuration->getPhpPath() . ' ' . $this->rootPath . '/console ' . $dumperCommandName . ' --env='.$this->configuration->getEnv();
+        $cmd = $this->configuration->getPhpPath() . ' ' .
+            $this->rootPath . '/console ' .
+            $dumperCommandName . ' --env='.$this->configuration->getEnv()
+            . ' --path=' . $this->configuration->getDumpsLocation()
+        ;
 
         return $cmd;
     }

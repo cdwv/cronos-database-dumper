@@ -29,7 +29,7 @@ class Configuration implements ConfigurationInterface
                     ->defaultValue('0')
                 ->end()
                 ->scalarNode('dumps_location')
-                    ->defaultValue('default')
+                    ->defaultValue('.')
                 ->end()
                 ->scalarNode('key')
                     ->defaultValue('default')
