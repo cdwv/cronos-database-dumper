@@ -22,7 +22,7 @@ composer require cdwv/cronos-database-dumper
 add bundle to AppKernel:
 ```
 new CodeWave\CronosDatabaseDumperBundle\CodeWaveCronosDatabaseDumperBundle(),
-new \CodeWave\MysqlDumperCommandBundle\CodeWaveMysqlDumperCommandBundle()
+new CodeWave\MysqlDumperCommandBundle\CodeWaveMysqlDumperCommandBundle()
 ```
 
 Run:
