@@ -5,7 +5,7 @@ Bundel który dodaje do projektu komendę, która z kolei dodaje do crontaba zad
 
 Installation
 ------------
-add to composer.json repository:
+add repository to composer.json:
 
 ```
 {
@@ -16,7 +16,7 @@ add to composer.json repository:
 run:
 ```
 composer require cdwv/mysql-dumper-command-bundle
-composer require cdwv/cronos-database-dumper
+composer require codewave/cronos-database-dumper
 ```
 
 add bundle to AppKernel:
