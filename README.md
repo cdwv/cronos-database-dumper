@@ -1,6 +1,6 @@
 Description
 ------------
-Bundel który dodaje do projektu komendę, która z kolei dodaje do crontaba zadanie,
+Bundel który dodaje do projektu komendę, która z kolei dodaje do crontaba zadania,
  tworzące kopie zapasową baz danych
 
 Installation
@@ -42,5 +42,6 @@ in config.yml, defaults values:
             dumps_location: .
             key: app_name
             php_path: /usr/bin/php
-            env: prod
+            env: prod 
+            clean_order_that: 14 #dni
 ```
