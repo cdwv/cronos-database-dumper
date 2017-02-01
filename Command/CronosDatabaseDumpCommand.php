@@ -30,7 +30,7 @@ class CronosDatabaseDumpCommand extends ContainerAwareCommand
                 $cron, $cronConfiguration->getKey()
             );
             $this->getContainer()->get('mybuilder.cronos_bundle.cron_process_updater')->updateWith(
-                $cleanCron, $cronConfiguration->getKey() . '_clean'
+                $cleanCron, $cronConfiguration->getKey()
             );
         } catch (\RuntimeException $e) {
             $output->writeln(sprintf('<Comment>Cron cannot be updated - %s<comment>', $e->getMessage()));
