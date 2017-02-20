@@ -1,7 +1,16 @@
 Description
 ------------
-Bundel który dodaje do projektu komendę, która z kolei dodaje do crontaba zadania,
- tworzące kopie zapasową baz danych
+This bundle adds to your crontab task which will create mysql dumps on regular basis.
+
+Requirements
+------------
+In the end everything goes into `mysqldump` command which means you need to have at least 
+`mysql-client` package installed on your server. 
+
+```
+sudo apt-get update
+sudo apt-get install mysql-client
+```
 
 Installation
 ------------
