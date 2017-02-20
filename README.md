@@ -43,5 +43,23 @@ in config.yml, defaults values:
             key: app_name
             php_path: /usr/bin/php
             env: prod 
-            clean_order_that: 14 #dni
+            clean_order_that: 14 #days
 ```
+
+Crontab:
+------------
+
+The above configuration will result in the following entry in your crontab:
+```text
+# KEY app_name
+0    4    *    *    *    /usr/bin/php __THE_PATH_TO_YOUR_PROJECT__/app/console cdwv:database:dump --env=prod --path=.
+
+0    4    *    *    *    find * -mtime +14 -exec rm {} \;
+# END
+```
+
+This task will dump **all** of the databases from within your symfony project if there are connections defined for them.
+
+Bear in mind that `__THE_PATH_TO_YOUR_PROJECT__` will contain resolved symlinks which means that you might need to call
+`cdwv:cronos-database-dumper:update` each time the path to new version of the app will change 
+(e.g. if you have releases named by build number).
