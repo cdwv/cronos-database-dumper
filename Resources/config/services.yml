@@ -26,7 +26,7 @@ services:
          class: MyBuilder\Cronos\Updater\SymfonyFileSystem
          public: false
 
-    mybuilder.cronos_bundle.cron_process_updater:
+    cdwv.cronos_bundle.cron_process_updater:
         class: MyBuilder\Cronos\Updater\CronUpdater
         arguments:
             - "@cdwv.cronos.cron_manipulator"

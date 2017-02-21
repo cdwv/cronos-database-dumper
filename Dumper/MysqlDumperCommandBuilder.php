@@ -7,9 +7,10 @@ use CodeWave\MysqlDumperCommandBundle\Command\MysqlDumperCommand;
 
 class MysqlDumperCommandBuilder
 {
+    /** @var CronConfiguration */
     private $configuration;
+    /** @var  string */
     private $rootPath;
-
 
     public function __construct(CronConfiguration $configuration, $rootPath)
     {
@@ -17,6 +18,7 @@ class MysqlDumperCommandBuilder
         $this->rootPath = $rootPath;
     }
 
+    /** @return string */
     public function buildCmd()
     {
         $dumperCommand = new MysqlDumperCommand();

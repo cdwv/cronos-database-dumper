@@ -4,19 +4,19 @@ namespace CodeWave\CronosDatabaseDumperBundle\Cron;
 
 class CronConfiguration
 {
-    /** @var  string */
+    /** @var int */
     private $hour;
-    /** @var  string */
+    /** @var int */
     private $minute;
-    /** @var  string */
+    /** @var string */
     private $key;
-    /** @var  string */
+    /** @var string */
     private $phpPath;
-    /** @var  string */
+    /** @var string */
     private $env;
-    /** @var  string */
+    /** @var string */
     private $dumpsLocation;
-    /** @var  int */
+    /** @var int */
     private $cleanOrderThat;
 
     public function setConfig($config)
@@ -30,39 +30,43 @@ class CronConfiguration
         $this->cleanOrderThat = $config['clean_order_that'];
     }
 
+    /** @return int */
     public function getHour()
     {
         return $this->hour;
     }
 
+    /** @return int */
     public function getMinute()
     {
         return $this->minute;
     }
 
+    /** @return string */
     public function getKey()
     {
         return $this->key;
     }
 
+    /** @return string */
     public function getPhpPath()
     {
         return $this->phpPath;
     }
 
+    /** @return string */
     public function getEnv()
     {
         return $this->env;
     }
 
+    /** @return string */
     public function getDumpsLocation()
     {
         return $this->dumpsLocation;
     }
 
-    /**
-     * @return int
-     */
+    /** @return int */
     public function getCleanOrderThat()
     {
         return $this->cleanOrderThat;

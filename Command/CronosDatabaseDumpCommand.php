@@ -26,10 +26,10 @@ class CronosDatabaseDumpCommand extends ContainerAwareCommand
             ->build('find ' . $backupDir . '* -mtime +' . $cronConfiguration->getCleanOrderThat() . ' -exec rm {} \;');
 
         try {
-            $this->getContainer()->get('mybuilder.cronos_bundle.cron_process_updater')->updateWith(
+            $this->getContainer()->get('cdwv.cronos_bundle.cron_process_updater')->updateWith(
                 $cron, $cronConfiguration->getKey()
             );
-            $this->getContainer()->get('mybuilder.cronos_bundle.cron_process_updater')->updateWith(
+            $this->getContainer()->get('cdwv.cronos_bundle.cron_process_updater')->updateWith(
                 $cleanCron, $cronConfiguration->getKey()
             );
         } catch (\RuntimeException $e) {

@@ -8,6 +8,7 @@ class CronJobBuilder
 {
     /** @var Cron */
     private $cron;
+    /** @var CronConfiguration */
     private $configuration;
 
     public function __construct(Cron $cron, CronConfiguration $configuration)
@@ -16,6 +17,10 @@ class CronJobBuilder
         $this->configuration = $configuration;
     }
 
+    /**
+     * @param string
+     * @return Cron
+     */
     public function build($command)
     {
         $this->cron
