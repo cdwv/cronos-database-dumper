@@ -1,5 +1,5 @@
 {
-  "name": "codewave/cronos-database-dumper",
+  "name": "cdwv/cronos-database-dumper",
   "description": "Cronos database dumper",
   "type": "symfony-bundle",
   "authors": [
