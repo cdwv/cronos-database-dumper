@@ -52,7 +52,7 @@ in config.yml, defaults values:
             key: app_name
             php_path: /usr/bin/php
             env: prod 
-            clean_order_that: 14 #days
+            clean_older_than: 14 #days
 ```
 
 Crontab:
