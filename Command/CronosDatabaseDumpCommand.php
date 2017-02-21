@@ -23,7 +23,7 @@ class CronosDatabaseDumpCommand extends ContainerAwareCommand
 
         $backupDir = $cronConfiguration->getDumpsLocation();
         $cleanCron = $this->getContainer()->get('cdwv.cron_builder')
-            ->build('find ' . $backupDir . '* -mtime +' . $cronConfiguration->getCleanOrderThat() . ' -exec rm {} \;');
+            ->build('find ' . $backupDir . '* -mtime +' . $cronConfiguration->getCleanOrderThan() . ' -exec rm {} \;');
 
         try {
             $this->getContainer()->get('cdwv.cronos_bundle.cron_process_updater')->updateWith(

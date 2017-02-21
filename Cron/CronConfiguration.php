@@ -17,7 +17,7 @@ class CronConfiguration
     /** @var string */
     private $dumpsLocation;
     /** @var int */
-    private $cleanOrderThat;
+    private $cleanOrderThan;
 
     public function setConfig($config)
     {
@@ -27,7 +27,7 @@ class CronConfiguration
         $this->phpPath = $config['php_path'];
         $this->env = $config['env'];
         $this->dumpsLocation = $config['dumps_location'];
-        $this->cleanOrderThat = $config['clean_order_that'];
+        $this->cleanOrderThan = $config['clean_older_than'];
     }
 
     /** @return int */
@@ -67,8 +67,8 @@ class CronConfiguration
     }
 
     /** @return int */
-    public function getCleanOrderThat()
+    public function getCleanOrderThan()
     {
-        return $this->cleanOrderThat;
+        return $this->cleanOrderThan;
     }
 }
