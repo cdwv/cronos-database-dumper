@@ -40,7 +40,7 @@ class Configuration implements ConfigurationInterface
                 ->scalarNode('env')
                   ->defaultValue('prod')
                 ->end()
-                ->scalarNode('clean_order_that')
+                ->scalarNode('clean_older_than')
                     ->defaultValue('14')
                 ->end()
             ->end();
