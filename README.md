@@ -1,10 +1,10 @@
 Description
 ------------
-This bundle adds to your crontab task which will create mysql dumps on regular basis.
+This bundle populates your crontab with tasks that will backup your databases using mysqldump.
 
 Requirements
 ------------
-In the end everything goes into `mysqldump` command which means you need to have at least 
+Backups are created using the `mysqldump` command which means you need to have at least 
 `mysql-client` package installed on your server. 
 
 ```
@@ -61,7 +61,7 @@ Crontab:
 The above configuration will result in the following entry in your crontab:
 ```text
 # KEY app_name
-0    4    *    *    *    /usr/bin/php __THE_PATH_TO_YOUR_PROJECT__/app/console cdwv:database:dump --env=prod --path=.
+0    4    *    *    *    /usr/bin/php __PATH_TO_YOUR_PROJECT__/app/console cdwv:database:dump --env=prod --path=.
 
 0    4    *    *    *    find * -mtime +14 -exec rm {} \;
 # END
@@ -69,6 +69,6 @@ The above configuration will result in the following entry in your crontab:
 
 This task will dump **all** of the databases from within your symfony project if there are connections defined for them.
 
-Bear in mind that `__THE_PATH_TO_YOUR_PROJECT__` will contain resolved symlinks which means that you might need to call
+Bear in mind that `__PATH_TO_YOUR_PROJECT__` will contain resolved symlinks which means that you might need to call
 `cdwv:cronos-database-dumper:update` each time the path to new version of the app will change 
 (e.g. if you have releases named by build number).
