@@ -2,6 +2,7 @@
   "name": "cdwv/cronos-database-dumper",
   "description": "Cronos database dumper",
   "type": "symfony-bundle",
+  "license": "MIT",
   "authors": [
     {
       "name": "Karol Grochowalski",
