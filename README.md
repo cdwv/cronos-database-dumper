@@ -65,3 +65,6 @@ This task will dump **all** of the databases from within your symfony project if
 Bear in mind that `__PATH_TO_YOUR_PROJECT__` will contain resolved symlinks which means that you might need to call
 `cdwv:cronos-database-dumper:update` each time the path to new version of the app will change 
 (e.g. if you have releases named by build number).
+
+## License
+The MIT License &copy; 2015 - 2016
