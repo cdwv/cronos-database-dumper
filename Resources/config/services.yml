@@ -6,7 +6,7 @@ services:
         class: MyBuilder\Cronos\Formatter\Cron
 
     cdwv.dumper_command_builder:
-        class:  CodeWave\CronosDatabaseDumperBundle\Dumper\MysqlDumperCommandBuilder
+        class:  CodeWave\CronosDatabaseDumperBundle\Dumper\DumperCommandBuilder
         arguments:
             - "@cdwv.cron_configuration"
             - "%kernel.root_dir%"

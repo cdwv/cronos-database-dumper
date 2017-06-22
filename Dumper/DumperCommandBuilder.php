@@ -3,9 +3,9 @@
 namespace CodeWave\CronosDatabaseDumperBundle\Dumper;
 
 use CodeWave\CronosDatabaseDumperBundle\Cron\CronConfiguration;
-use CodeWave\MysqlDumperCommandBundle\Command\MysqlDumperCommand;
+use CodeWave\DatabaseDumperCommandBundle\Command\DatabaseDumperCommand;
 
-class MysqlDumperCommandBuilder
+class DumperCommandBuilder
 {
     /** @var CronConfiguration */
     private $configuration;
@@ -21,7 +21,7 @@ class MysqlDumperCommandBuilder
     /** @return string */
     public function buildCmd()
     {
-        $dumperCommand = new MysqlDumperCommand();
+        $dumperCommand = new DatabaseDumperCommand();
         $dumperCommandName = $dumperCommand->getName();
 
         $cmd = $this->configuration->getPhpPath() . ' ' .
